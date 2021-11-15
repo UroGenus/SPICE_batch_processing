@@ -130,4 +130,4 @@ b22b98cdeb4a9304cb5d48026a85128     SP:Homo Sapiens
 dfd811849cc2fadebc929bb925902e5     SP:Homo Sapiens
 ```
 
-ALREADY TRIED
+**ISSUE**: *How to rename 1 to chr1 in Homo_sapiens_assembly19.dbsnp.vcf and Homo_sapiens_assembly19.dict OR rename chr1 to 1 in WG_IAD127899.20170720.interval_list?*
