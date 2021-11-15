@@ -84,6 +84,13 @@ java -jar picard.jar BedToIntervalList  I=/storage/research/dbmr_urology/Prostat
 
 #### snps_in_kit_vcf_file
 
+One needs to install GATK. Failed to do it using [UBELIX EasyBuild instructions](https://hpc-unibe-ch.github.io/software/EasyBuild.html), it was installed by UBELIX admins.
+
+```
+module load Workspace/home GATK
+```
+
+
 WORK IN PROGRESS
 
 Format of IonTorrent panel located at `/storage/research/dbmr_urology/Prostate_PDO/WG_IAD127899.20170720.designed.bed`
@@ -94,6 +101,7 @@ chr1	11188005	11188099	REGION_4_1.18508	.	GENE_ID=REGION_4;Pool=1
 chrX	123229137	123229260	STAG2_167026_1.40045	.	GENE_ID=STAG2_167026;Pool=1
 chrX	123229236	123229348	STAG2_167026_1.63590	.	GENE_ID=STAG2_167026;Pool=2
 ```
+Format of IonTorrent panel intervals located at `/storage/research/dbmr_urology/Prostate_PDO/SPICE_data/WG_IAD127899.20170720.interval_list`
 
 
-**ALREADY TRIED**
+ALREADY TRIED
