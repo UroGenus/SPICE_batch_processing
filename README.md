@@ -102,6 +102,12 @@ chrX	123229137	123229260	STAG2_167026_1.40045	.	GENE_ID=STAG2_167026;Pool=1
 chrX	123229236	123229348	STAG2_167026_1.63590	.	GENE_ID=STAG2_167026;Pool=2
 ```
 Format of IonTorrent panel intervals located at `/storage/research/dbmr_urology/Prostate_PDO/SPICE_data/WG_IAD127899.20170720.interval_list`
-
+```
+@HD	VN:1.6	SO:coordinate
+@SQ	SN:chr1	LN:249250621	M5:1b22b98cdeb4a9304cb5d48026a85128	UR:file:/storage/research/dbmr_urology/Prostate_PDO/hg19.fa
+@SQ	SN:chr2	LN:243199373	M5:a0d9851da00400dec1098a9255ac712e	UR:file:/storage/research/dbmr_urology/Prostate_PDO/hg19.fa
+@SQ	SN:chr3	LN:198022430	M5:641e4338fa8d52a5b781bd2a2c08d3c3	UR:file:/storage/research/dbmr_urology/Prostate_PDO/hg19.fa
+@SQ	SN:chr4	LN:191154276	M5:23dccd106897542ad87d2765d28a19a1	UR:file:/storage/research/dbmr_urology/Prostate_PDO/hg19.fa
+```
 
 ALREADY TRIED
