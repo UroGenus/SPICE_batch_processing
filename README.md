@@ -93,7 +93,7 @@ gatk SelectVariants -R /storage/research/dbmr_urology/Prostate_PDO/hg19.fa -V Ho
 ```
 
 **ERROR MESSAGE BECAUSE OF CHROMOSOME FORMAT MISMATCH**: 
-*A USER ERROR has occurred: Badly formed genome unclippedLoc: Contig chr1 given as location, but this contig isn't present in the Fasta sequence dictionary*
+*Badly formed genome unclippedLoc: Contig chr1 given as location, but this contig isn't present in the Fasta sequence dictionary*
 
 Format of IonTorrent panel located at `/storage/research/dbmr_urology/Prostate_PDO/WG_IAD127899.20170720.designed.bed`
 ```
@@ -130,4 +130,6 @@ b22b98cdeb4a9304cb5d48026a85128     SP:Homo Sapiens
 dfd811849cc2fadebc929bb925902e5     SP:Homo Sapiens
 ```
 
-**ISSUE**: *How to rename 1 to chr1 in Homo_sapiens_assembly19.dbsnp.vcf and Homo_sapiens_assembly19.dict OR rename chr1 to 1 in WG_IAD127899.20170720.interval_list?* OR maybe there is dbsnp with format chr1?
+**ISSUE**: *How to rename 1 to chr1 in Homo_sapiens_assembly19.dbsnp.vcf and Homo_sapiens_assembly19.dict OR rename chr1 to 1 in WG_IAD127899.20170720.interval_list?* OR maybe there is dbsnp with format chr1 (e.g. there is something [here](https://genome.ucsc.edu/cgi-bin/hgTables?hgta_table=cytoBand&hgta_doSchema=describe%20table%20schema), but I'm not sure)?
+
+**ALSO TRIED**: Following [this instructions](https://www.biostars.org/p/410789/), but GCF_000001405.25_GRCh37.p13_assembly_report.txt does not seem to have all chromosome names that we have in our panel.
