@@ -82,3 +82,6 @@ java -jar picard.jar BedToIntervalList  I=/storage/research/dbmr_urology/Prostat
 ???
 ```
 
+#### snps_in_kit_vcf_file
+
+**ALREADY TRIED**
