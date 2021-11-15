@@ -86,7 +86,7 @@ java -jar picard.jar BedToIntervalList  I=/storage/research/dbmr_urology/Prostat
 
 #### snps_in_kit_vcf_file
 
-One needs to installu GATK. Failed to do it using [UBELIX EasyBuild instructions](https://hpc-unibe-ch.github.io/software/EasyBuild.html), it was installed by UBELIX admins. After the installation, run 
+One needs to install GATK. Failed to do it using [UBELIX EasyBuild instructions](https://hpc-unibe-ch.github.io/software/EasyBuild.html), it was then installed locally by UBELIX admins. After the installation, do 
 
 ```
 download Homo_sapiens_assembly19.dbsnp.vcf, Homo_sapiens_assembly19.dict, Homo_sapiens_assembly19.fasta, Homo_sapiens_assembly19.fasta.fai from https://console.cloud.google.com/storage/browser/gcp-public-data--broad-references/hg19/v0
