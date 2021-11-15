@@ -86,11 +86,13 @@ java -jar picard.jar BedToIntervalList  I=/storage/research/dbmr_urology/Prostat
 
 #### snps_in_kit_vcf_file
 
-One needs to install GATK. Failed to do it using [UBELIX EasyBuild instructions](https://hpc-unibe-ch.github.io/software/EasyBuild.html), it was installed by UBELIX admins. After the installation, run 
+One needs to installu GATK. Failed to do it using [UBELIX EasyBuild instructions](https://hpc-unibe-ch.github.io/software/EasyBuild.html), it was installed by UBELIX admins. After the installation, run 
 
 ```
+download Homo_sapiens_assembly19.dbsnp.vcf, Homo_sapiens_assembly19.dict, Homo_sapiens_assembly19.fasta, Homo_sapiens_assembly19.fasta.fai from https://console.cloud.google.com/storage/browser/gcp-public-data--broad-references/hg19/v0
 module load Workspace/home GATK
-gatk SelectVariants -R /storage/research/dbmr_urology/Prostate_PDO/hg19.fa -V Homo_sapiens_assembly19.dbsnp.vcf -L /storage/research/dbmr_urology/Prostate_PDO/Panos_test_dir/WG_IAD127899.20170720.wout.chr.interval_list -select-type-to-include SNP -O WG_IAD127899.20170720.snp
+gatk IndexFeatureFile -I Homo_sapiens_assembly19.dbsnp.vcf
+gatk SelectVariants -R /storage/research/dbmr_urology/Prostate_PDO/SPICE_data/Homo_sapiens_assembly19.fasta -V Homo_sapiens_assembly19.dbsnp.vcf -L /storage/research/dbmr_urology/Prostate_PDO/Panos_test_dir/WG_IAD127899.20170720.wout.chr.interval_list -select-type-to-include SNP -O WG_IAD127899.20170720.snp
 
 ```
 
