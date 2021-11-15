@@ -84,7 +84,7 @@ java -jar picard.jar BedToIntervalList  I=/storage/research/dbmr_urology/Prostat
 
 #### snps_in_kit_vcf_file
 
-One needs to install GATK. Failed to do it using [UBELIX EasyBuild instructions](https://hpc-unibe-ch.github.io/software/EasyBuild.html), it was installed by UBELIX admins.
+One needs to install GATK. Failed to do it using [UBELIX EasyBuild instructions](https://hpc-unibe-ch.github.io/software/EasyBuild.html), it was installed by UBELIX admins. After the installation, run 
 
 ```
 module load Workspace/home GATK
