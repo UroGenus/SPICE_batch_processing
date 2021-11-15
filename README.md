@@ -101,7 +101,7 @@ chr1	11188005	11188099	REGION_4_1.18508	.	GENE_ID=REGION_4;Pool=1
 chrX	123229137	123229260	STAG2_167026_1.40045	.	GENE_ID=STAG2_167026;Pool=1
 chrX	123229236	123229348	STAG2_167026_1.63590	.	GENE_ID=STAG2_167026;Pool=2
 ```
-Format of IonTorrent panel intervals located at `/storage/research/dbmr_urology/Prostate_PDO/SPICE_data/WG_IAD127899.20170720.interval_list`
+Format of IonTorrent panel intervals located at `/storage/research/dbmr_urology/Prostate_PDO/SPICE_data/WG_IAD127899.20170720.interval_list` that was generated with `picard.jar BedToIntervalList`
 ```
 @HD	VN:1.6	SO:coordinate
 @SQ	SN:chr1	LN:249250621	M5:1b22b98cdeb4a9304cb5d48026a85128	UR:file:/storage/research/dbmr_urology/Prostate_PDO/hg19.fa
@@ -109,14 +109,14 @@ Format of IonTorrent panel intervals located at `/storage/research/dbmr_urology/
 @SQ	SN:chr3	LN:198022430	M5:641e4338fa8d52a5b781bd2a2c08d3c3	UR:file:/storage/research/dbmr_urology/Prostate_PDO/hg19.fa
 @SQ	SN:chr4	LN:191154276	M5:23dccd106897542ad87d2765d28a19a1	UR:file:/storage/research/dbmr_urology/Prostate_PDO/hg19.fa
 ```
-Format of `/storage/research/dbmr_urology/Prostate_PDO/SPICE_data/Homo_sapiens_assembly19.dbsnp.vcf`
+Format of `/storage/research/dbmr_urology/Prostate_PDO/SPICE_data/Homo_sapiens_assembly19.dbsnp.vcf` downloaded from `https://console.cloud.google.com/storage/browser/gcp-public-data--broad-references/hg19/v0`
 ```
 #CHROM  POS     ID      REF     ALT     QUAL    FILTER  INFO    
 1       10144   rs144773400     TA      T       .       PASS    ASP;RSPOS=10145;SAO=0;SSR=0;VC=DIV;VP=050000000004000000000200;WGT=0;dbSNPBuildID=134
 1       10228   rs143255646     TA      T       .       PASS    ASP;RSPOS=10229;SAO=0;SSR=0;VC=DIV;VP=050000000004000000000200;WGT=0;dbSNPBuildID=134
 1       10234   rs145599635     C       T       .       PASS    ASP;RSPOS=10234;SAO=0;SSR=0;VC=SNV;VP=050000000004000000000100;WGT=0;dbSNPBuildID=134
 ```
-Format of `/storage/research/dbmr_urology/Prostate_PDO/SPICE_data/Homo_sapiens_assembly19.dict`
+Format of `/storage/research/dbmr_urology/Prostate_PDO/SPICE_data/Homo_sapiens_assembly19.dict` downloaded from `https://console.cloud.google.com/storage/browser/gcp-public-data--broad-references/hg19/v0`
 
 ```
 @HD     VN:1.0  SO:unsorted
