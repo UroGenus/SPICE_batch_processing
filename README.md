@@ -92,11 +92,8 @@ gatk SelectVariants -R /storage/research/dbmr_urology/Prostate_PDO/hg19.fa -V Ho
 
 ```
 
-**ERROR MESSAGE BECAUSE OF CHROMOSOME FORMAT MISMATCH**
-A USER ERROR has occurred: Badly formed genome unclippedLoc: Contig chr1 given as location, but this contig isn't present in the Fasta sequence dictionary
-
-
-WORK IN PROGRESS
+**ERROR MESSAGE BECAUSE OF CHROMOSOME FORMAT MISMATCH**: 
+*A USER ERROR has occurred: Badly formed genome unclippedLoc: Contig chr1 given as location, but this contig isn't present in the Fasta sequence dictionary*
 
 Format of IonTorrent panel located at `/storage/research/dbmr_urology/Prostate_PDO/WG_IAD127899.20170720.designed.bed`
 ```
