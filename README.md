@@ -68,7 +68,7 @@ TBC
 ### Obtaining files required for processing
 
 #### kit_target_interval_file, kit_bait_interval_file 
-IonTorrent
+##### IonTorrent
 ```
 wget https://hgdownload.cse.ucsc.edu/goldenpath/hg19/bigZips/hg19.fa.gz
 gunzip hg19.fa.gz
