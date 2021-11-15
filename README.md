@@ -15,7 +15,7 @@ cwltool --singularity PATH_TO/SPICE-pipeline-CWL/cwl/workflows/pipeline.cwl PATH
 
 ```
 
-### Parameters for IonTorrent
+### Parameters for IonTorrent (one example file)
 ```
 bam_file_normal:
   class: File
@@ -60,7 +60,7 @@ create_reports: true
 log_to_file: true
 ```
 
-### Parameters for WES
+### Parameters for WES (one example file)
 ```
 TBC
 ```
