@@ -84,4 +84,18 @@ java -jar picard.jar BedToIntervalList  I=/storage/research/dbmr_urology/Prostat
 
 #### snps_in_kit_vcf_file
 
+WORK IN PROGRESS
+
+Format of IonTorrent panel located at `/storage/research/dbmr_urology/Prostate_PDO/WG_IAD127899.20170720.designed.bed`
+```
+chr1	11174374	11174494	REGION_1_1.15817	.	GENE_ID=REGION_1;Pool=1
+chr1	11184539	11184658	REGION_2_1.6199	.	GENE_ID=REGION_2,REGION_3;Pool=2
+chr1	11188005	11188099	REGION_4_1.18508	.	GENE_ID=REGION_4;Pool=1
+...
+chrX	123229137	123229260	STAG2_167026_1.40045	.	GENE_ID=STAG2_167026;Pool=1
+chrX	123229236	123229348	STAG2_167026_1.63590	.	GENE_ID=STAG2_167026;Pool=2
+chrX	123234402	123234472	STAG2_167027_1.322	.	GENE_ID=STAG2_167027;Pool=1
+```
+
+
 **ALREADY TRIED**
