@@ -88,7 +88,12 @@ One needs to install GATK. Failed to do it using [UBELIX EasyBuild instructions]
 
 ```
 module load Workspace/home GATK
+gatk SelectVariants -R /storage/research/dbmr_urology/Prostate_PDO/hg19.fa -V Homo_sapiens_assembly19.dbsnp.vcf -L WG_IAD127899.20170720.interval_list -select-type-to-include SNP -O WG_IAD127899.20170720.snp
+
 ```
+
+**ERROR MESSAGE BECAUSE OF CHROMOSOME FORMAT MISMATCH**
+A USER ERROR has occurred: Badly formed genome unclippedLoc: Contig chr1 given as location, but this contig isn't present in the Fasta sequence dictionary
 
 
 WORK IN PROGRESS
