@@ -20,10 +20,10 @@ cwltool --no-container PATH_TO/SPICE-pipeline-CWL/cwl/workflows/pipeline.cwl PAT
 ```
 bam_file_normal:
   class: File
-  path: /storage/research/dbmr_urology/Prostate_PDX/IonTorrent/IonXpress-026.bam
+  path: /storage/research/dbmr_urology/Prostate_PDX/IonTorrent/bam/IonXpress-026.bam
 bam_file_tumor:
   class: File
-  path: /storage/research/dbmr_urology/Prostate_PDX/IonTorrent/IonXpress-025.bam
+  path: /storage/research/dbmr_urology/Prostate_PDX/IonTorrent/bam/IonXpress-025.bam
 reference_genome_fasta_file:
   class: File
   path: /storage/research/dbmr_urology/Prostate_PDO/hg19.fa
