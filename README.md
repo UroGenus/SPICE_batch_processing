@@ -11,7 +11,8 @@ conda install -c conda-forge cwltool
 ### Process one file 
 ```
 conda activate spice-env
-cwltool --singularity PATH_TO/SPICE-pipeline-CWL/cwl/workflows/pipeline.cwl PATH_TO/parameters.yaml
+module load nodejs/14.17.0-GCCcore-10.3.0
+cwltool --no-container PATH_TO/SPICE-pipeline-CWL/cwl/workflows/pipeline.cwl PATH_TO/parameters.yaml
 
 ```
 
@@ -40,7 +41,7 @@ kit_bait_interval_file:
   path: /storage/research/dbmr_urology/Prostate_PDO/SPICE_data/WG_IAD127899.20170720.interval_list
 snps_in_kit_vcf_file:
   class: File
-  path: path/to/snps_in_kit.vcf
+  path: /storage/research/dbmr_urology/Prostate_PDO/SPICE_data/WG_IAD127899.20170720.w.chr.snp
 ethseq_snps_vcf_file:
   class: File
   path: /storage/research/dbmr_urology/Prostate_PDO/SPICE_data/ethseq-universal_exonic_model-hg19.vcf
