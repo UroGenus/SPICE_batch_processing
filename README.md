@@ -106,16 +106,8 @@ gatk IndexFeatureFile -I Homo_sapiens_assembly19.dbsnp.vcf
 
 SPICE pipeline breaks on the following command
 ```
-'gatk4' 'CollectHsMetrics' '--INPUT' '/tmp/xg6t3p0f/stga4de0ed6-3df9-4950-87e4-db415f469bba/IonXpress-025.bam' '--BAIT_INTERVALS' '/tmp/xg6t3p0f/stg1b18cac0-af3f-4143-8bab-ad2519a13013/WG_IAD127899.20170720.interval_list' '--TARGET_INTERVALS' '/tmp/xg6t3p0f/stg1b18cac0-af3f-4143-8bab-ad2519a13013/WG_IAD127899.20170720.interval_list' '--VALIDATION_STRINGENCY' 'LENIENT' '--OUTPUT' 'hsmetrics_tumor/hsmetrics_tumor.txt' '--PER_TARGET_COVERAGE' 'hsmetrics_tumor/hsmetrics_per_target_coverage_tumor.txt' '--REFERENCE_SEQUENCE' '/tmp/xg6t3p0f/stgcf87b360-d190-47d7-af60-77185726fc13/hg19.fa' 2> picard.log 1>&2
-```
+'pacbam' 'mode=2' 'out=/tmp/lggqd3or' 'bam=/tmp/8m5f0jiz/stg15b8011a-1d79-438d-8fd0-e12d8b1264f8/IonXpress-025.bam' 'mbq=20' 'mrq=20' 'fasta=/tmp/8m5f0jiz/stgadc0600e-d300-4075-9d36-293f60fb3034/hg19.fa' 'regionperc=0.5' 'bed=/tmp/8m5f0jiz/stg4cdc85a9-3600-4c3b-99f9-e973468b4f74/WG_IAD127899.20170720.designed.bed' 'vcf=/tmp/8m5f0jiz/stg5fa1c5ef-d8a8-42db-b470-a9f48aa29ffc/WG_IAD127899.20170720.snp.vcf' 'threads=5' 2> pileup_tumor.log 1>&2
 
-Tried to call the command explicitly like this:
 ```
-gatk CollectHsMetrics --INPUT /storage/research/dbmr_urology/Prostate_PDX/IonTorrent/bam/IonXpress-026.bam --BAIT_INTERVALS /storage/research/dbmr_urology/Prostate_PDO/SPICE_data/WG_IAD127899.20170720.interval_list --TARGET_INTERVALS /storage/research/dbmr_urology/Prostate_PDO/SPICE_data/WG_IAD127899.20170720.interval_list --VALIDATION_STRINGENCY LENIENT --OUTPUT tmp/hsmetrics_tumor.txt --PER_TARGET_COVERAGE tmp/hsmetrics_per_target_coverage_tumor.txt --REFERENCE_SEQUENCE /storage/research/dbmr_urology/Prostate_PDO/hg19.fa
-```
-
-**Error message**: *htsjdk.samtools.util.SequenceUtil$SequenceListsDifferException: Sequence dictionaries are not the same size (25, 93)* 
-
-**Hypothesis**: Alignment was done using different hg19.fasta file as compared to the one downloaded (https://hgdownload.cse.ucsc.edu/goldenpath/hg19/bigZips/hg19.fa.gz). Now trying to find out, which fasta file has been originally used.
 
 
