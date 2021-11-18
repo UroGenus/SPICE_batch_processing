@@ -72,12 +72,17 @@ TBC
 
 ##### IonTorrent
 ```
-wget https://hgdownload.cse.ucsc.edu/goldenpath/hg19/bigZips/hg19.fa.gz
-gunzip hg19.fa.gz
+cd DIR_WITH_PipeIT.img
+singularity exec --cleanenv -B /path/to/current/directory/ PipeIT.img cp /PipeIT_resources/usr/local/res/hg19.fasta .
 wget https://github.com/broadinstitute/picard/releases/download/2.26.5/picard.jar
 module load Java/11.0.2
 java -jar picard.jar CreateSequenceDictionary R=/storage/research/dbmr_urology/Prostate_PDO/hg19.fa O=/storage/research/dbmr_urology/Prostate_PDO/hg19.dict
 java -jar picard.jar BedToIntervalList  I=/storage/research/dbmr_urology/Prostate_PDO/WG_IAD127899.20170720.designed.bed O=/storage/research/dbmr_urology/Prostate_PDO/WG_IAD127899.20170720.interval_list SD=/storage/research/dbmr_urology/Prostate_PDO/hg19.fa
+module load vital-it/7
+module load UHTS/Analysis/samtools/1.10
+samtools faidx hg19.fa
+cp hg19.fa.fai hg19.fai
+cp hg19.dict hg19.fa.dict
 ```
 
 ##### WES
