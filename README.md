@@ -106,8 +106,9 @@ gatk IndexFeatureFile -I Homo_sapiens_assembly19.dbsnp.vcf
 
 SPICE pipeline breaks on the following command
 ```
-'pacbam' 'mode=2' 'out=/tmp/lggqd3or' 'bam=/tmp/8m5f0jiz/stg15b8011a-1d79-438d-8fd0-e12d8b1264f8/IonXpress-025.bam' 'mbq=20' 'mrq=20' 'fasta=/tmp/8m5f0jiz/stgadc0600e-d300-4075-9d36-293f60fb3034/hg19.fa' 'regionperc=0.5' 'bed=/tmp/8m5f0jiz/stg4cdc85a9-3600-4c3b-99f9-e973468b4f74/WG_IAD127899.20170720.designed.bed' 'vcf=/tmp/8m5f0jiz/stg5fa1c5ef-d8a8-42db-b470-a9f48aa29ffc/WG_IAD127899.20170720.snp.vcf' 'threads=5' 2> pileup_tumor.log 1>&2
+gatk CollectHsMetrics --INPUT /storage/research/dbmr_urology/Prostate_PDX/IonTorrent/bam/IonXpress-026.bam --BAIT_INTERVALS /storage/research/dbmr_urology/Prostate_PDO/SPICE_data/WG_IAD127899.20170720.interval_list --TARGET_INTERVALS /storage/research/dbmr_urology/Prostate_PDO/SPICE_data/WG_IAD127899.20170720.interval_list --VALIDATION_STRINGENCY LENIENT --OUTPUT tmp/hsmetrics_tumor.txt --PER_TARGET_COVERAGE tmp/hsmetrics_per_target_coverage_tumor.txt --REFERENCE_SEQUENCE /storage/research/dbmr_urology/Prostate_PDO/hg19.fa
 
 ```
+**ERROR MESSAGE**: *htsjdk.samtools.util.SequenceUtil$SequenceListsDifferException: Sequence dictionaries are not the same size (25, 93)*
 
 
