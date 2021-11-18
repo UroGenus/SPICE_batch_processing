@@ -41,7 +41,7 @@ kit_bait_interval_file:
   path: /storage/research/dbmr_urology/Prostate_PDO/SPICE_data/WG_IAD127899.20170720.interval_list
 snps_in_kit_vcf_file:
   class: File
-  path: /storage/research/dbmr_urology/Prostate_PDO/SPICE_data/WG_IAD127899.20170720.w.chr.snp
+  path: /storage/research/dbmr_urology/Prostate_PDO/SPICE_data/WG_IAD127899.20170720.snp.vcf
 ethseq_snps_vcf_file:
   class: File
   path: /storage/research/dbmr_urology/Prostate_PDO/SPICE_data/ethseq-universal_exonic_model-hg19.vcf
@@ -99,8 +99,7 @@ download Homo_sapiens_assembly19.dbsnp.vcf, Homo_sapiens_assembly19.dict, Homo_s
 module load Workspace_Home/1.1
 module load Workspace/home GATK
 gatk IndexFeatureFile -I Homo_sapiens_assembly19.dbsnp.vcf
-gatk SelectVariants -R /storage/research/dbmr_urology/Prostate_PDO/SPICE_data/Homo_sapiens_assembly19.fasta -V Homo_sapiens_assembly19.dbsnp.vcf -L /storage/research/dbmr_urology/Prostate_PDO/SPICE_data/WG_IAD127899.20170720.wout.chr.interval_list -select-type-to-include SNP -O WG_IAD127899.20170720.snp
-
+./SPICE.preprocessing.sh
 ```
 
 #### CURRENT ISSUES
