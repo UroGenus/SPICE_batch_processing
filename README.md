@@ -55,7 +55,7 @@ sample_sex: m
 vep_reference_genome_version: GRCh37
 vep_data_directory:
   class: Directory
-  path: /storage/research/dbmr_urology/Prostate_PDO/SPICE_data/homo_sapiens_vep_104_GRCh37
+  path: /storage/research/dbmr_urology/Prostate_PDO/SPICE_data/homo_sapiens
 threads: 5
 create_reports: true
 log_to_file: true
@@ -100,7 +100,7 @@ sample_sex: m
 vep_reference_genome_version: GRCh37
 vep_data_directory:
   class: Directory
-  path: /storage/research/dbmr_urology/Prostate_PDO/SPICE_data/homo_sapiens_vep_104_GRCh37
+  path: /storage/research/dbmr_urology/Prostate_PDO/SPICE_data/homo_sapiens
 threads: 5
 create_reports: true
 log_to_file: true
