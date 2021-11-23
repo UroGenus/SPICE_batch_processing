@@ -74,28 +74,28 @@ reference_genome_fasta_file:
   path: /storage/research/dbmr_urology/Prostate_PDO/SPICE_data/hg19_WES.fa
 kit_target_bed_file:
   class: File
-  path: 
+  path: /storage/research/dbmr_urology/Prostate_PDO/SPICE_data/Haloplex_Regions_b37_Covered_noHeader_with_genenames.bed
 kit_bait_bed_file:
   class: File
-  path: 
+  path: /storage/research/dbmr_urology/Prostate_PDO/SPICE_data/Haloplex_Regions_b37_Covered_noHeader_with_genenames.bed
 kit_target_interval_file:
   class: File
-  path: 
+  path: /storage/research/dbmr_urology/Prostate_PDO/SPICE_data/Haloplex_Regions_b37_Covered_noHeader_with_genenames.interval_list
 kit_bait_interval_file:
   class: File
-  path: 
+  path: /storage/research/dbmr_urology/Prostate_PDO/SPICE_data/Haloplex_Regions_b37_Covered_noHeader_with_genenames.interval_list
 snps_in_kit_vcf_file:
   class: File
-  path: 
+  path: /storage/research/dbmr_urology/Prostate_PDO/SPICE_data/Haloplex_Regions_b37_Covered_noHeader_with_genenames.snp.vcf
 ethseq_snps_vcf_file:
   class: File
-  path: /storage/research/dbmr_urology/Prostate_PDO/SPICE_data/ethseq-universal_exonic_model-hg19.vcf
+  path: /storage/research/dbmr_urology/Prostate_PDO/SPICE_data/ethseq-universal_exonic_model-hg19_nochr.vcf
 ethseq_snps_gds_file:
   class: File
-  path: /storage/research/dbmr_urology/Prostate_PDO/SPICE_data/ethseq-universal_exonic_model-hg19.gds
+  path: /storage/research/dbmr_urology/Prostate_PDO/SPICE_data/ethseq-universal_exonic_model-hg19_nochr.gds
 spia_snps_vcf_file:
   class: File
-  path: /storage/research/dbmr_urology/Prostate_PDO/SPICE_data/snps_spia_default-hg19.vcf
+  path: /storage/research/dbmr_urology/Prostate_PDO/SPICE_data/snps_spia_default-hg19_nochr.vcf
 sample_sex: m
 vep_reference_genome_version: GRCh37
 vep_data_directory:
