@@ -143,7 +143,16 @@ download Homo_sapiens_assembly19.dbsnp.vcf, Homo_sapiens_assembly19.dict, Homo_s
 module load Workspace_Home/1.1
 module load Workspace/home GATK
 gatk IndexFeatureFile -I Homo_sapiens_assembly19.dbsnp.vcf
+```
+
+##### IonTorrent
+```
 ./SPICE.preprocessing.sh
+```
+
+##### WES
+```
+gatk SelectVariants -R /storage/research/dbmr_urology/Prostate_PDO/SPICE_data/Homo_sapiens_assembly19.fasta -V /storage/research/dbmr_urology/Prostate_PDO/SPICE_data/Homo_sapiens_assembly19.dbsnp.vcf -L Haloplex_Regions_b37_Covered_noHeader_with_genenames.interval_list -select-type-to-include SNP -O Haloplex_Regions_b37_Covered_noHeader_with_genenames.snp.vcf
 ```
 
 #### CURRENT ISSUES
