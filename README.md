@@ -116,13 +116,13 @@ cd DIR_WITH_PipeIT.img
 singularity exec --cleanenv -B /path/to/current/directory/ PipeIT.img cp /PipeIT_resources/usr/local/res/hg19.fasta .
 wget https://github.com/broadinstitute/picard/releases/download/2.26.5/picard.jar
 module load Java/11.0.2
-java -jar picard.jar CreateSequenceDictionary R=/storage/research/dbmr_urology/Prostate_PDO/hg19.fa O=/storage/research/dbmr_urology/Prostate_PDO/hg19.dict
-java -jar picard.jar BedToIntervalList  I=/storage/research/dbmr_urology/Prostate_PDO/WG_IAD127899.20170720.designed.bed O=/storage/research/dbmr_urology/Prostate_PDO/SPICE_data/WG_IAD127899.20170720.interval_list SD=/storage/research/dbmr_urology/Prostate_PDO/hg19.fa
+java -jar PATHTO/picard.jar CreateSequenceDictionary R=/storage/research/dbmr_urology/Prostate_PDO/hg19_IonTorrent.fa O=/storage/research/dbmr_urology/Prostate_PDO/hg19_IonTorrent.dict
+java -jar PATHTO/picard.jar BedToIntervalList  I=/storage/research/dbmr_urology/Prostate_PDO/WG_IAD127899.20170720.designed.bed O=/storage/research/dbmr_urology/Prostate_PDO/SPICE_data/WG_IAD127899.20170720.interval_list SD=/storage/research/dbmr_urology/Prostate_PDO/hg19_IonTorrent.fa
 module load vital-it/7
 module load UHTS/Analysis/samtools/1.10
-samtools faidx hg19.fa
-cp hg19.fa.fai hg19.fai
-cp hg19.dict hg19.fa.dict
+samtools faidx hg19_IonTorrent.fa
+cp hg19_IonTorrent.fa.fai hg19_IonTorrent.fai
+cp hg19_IonTorrent.dict hg19_IonTorrent.fa.dict
 ```
 
 ##### WES
@@ -131,6 +131,7 @@ awk -F'\t' -v OFS="\t" '{ print $2, $3, $4, $1 }' S06588914_Agilent_Clinical_Exo
 module load UHTS/Analysis/BEDTools/2.29.2
 bedtools intersect -wa -wb -a Haloplex_Regions_b37_Covered_noHeader_noAnn.bed -b S06588914_Agilent_Clinical_Exome_TargetGeneSymbols.bed > tmp.bed
 awk -F'\t' -v OFS="\t" '{ print $1, $2, $3, $7 }' tmp.bed > S06588914_Agilent_Clinical_Exome_TargetGeneSymbols_with_genenames.bed
+java -jar PATHTO/picard.jar BedToIntervalList I=/storage/research/dbmr_urology/Prostate_PDO/SPICE_data/S06588914_Agilent_Clinical_Exome_TargetGeneSymbols_with_genenames.bed O=/storage/research/dbmr_urology/Prostate_PDO/SPICE_data/S06588914_Agilent_Clinical_Exome_TargetGeneSymbols.interval_list SD=/storage/research/dbmr_urology/Prostate_PDO/SPICE_data/hg19_WES.fa
 ```
 
 #### snps_in_kit_vcf_file
