@@ -130,7 +130,7 @@ cp hg19.dict hg19.fa.dict
 awk -F'\t' -v OFS="\t" '{ print $2, $3, $4, $1 }' S06588914_Agilent_Clinical_Exome_TargetGeneSymbols.txt > S06588914_Agilent_Clinical_Exome_TargetGeneSymbols.bed
 module load UHTS/Analysis/BEDTools/2.29.2
 bedtools intersect -wa -wb -a Haloplex_Regions_b37_Covered_noHeader_noAnn.bed -b S06588914_Agilent_Clinical_Exome_TargetGeneSymbols.bed > tmp.bed
-
+awk -F'\t' -v OFS="\t" '{ print $1, $2, $3, $7 }' tmp.bed > S06588914_Agilent_Clinical_Exome_TargetGeneSymbols_with_genenames.bed
 ```
 
 #### snps_in_kit_vcf_file
