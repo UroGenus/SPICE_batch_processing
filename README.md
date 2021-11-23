@@ -63,7 +63,47 @@ log_to_file: true
 
 ### Parameters for WES (one example file)
 ```
-TBC
+bam_file_normal:
+  class: File
+  path: /storage/research/dbmr_urology/SequencingData/PNPCa_seq_cornell/cornell_wes/PM1548-SK1N1.bam
+bam_file_tumor:
+  class: File
+  path: /storage/research/dbmr_urology/SequencingData/PNPCa_seq_cornell/cornell_wes/PM1548-SK1T1.bam
+reference_genome_fasta_file:
+  class: File
+  path: /storage/research/dbmr_urology/Prostate_PDO/SPICE_data/hg19_WES.fa
+kit_target_bed_file:
+  class: File
+  path: 
+kit_bait_bed_file:
+  class: File
+  path: 
+kit_target_interval_file:
+  class: File
+  path: 
+kit_bait_interval_file:
+  class: File
+  path: 
+snps_in_kit_vcf_file:
+  class: File
+  path: 
+ethseq_snps_vcf_file:
+  class: File
+  path: /storage/research/dbmr_urology/Prostate_PDO/SPICE_data/ethseq-universal_exonic_model-hg19.vcf
+ethseq_snps_gds_file:
+  class: File
+  path: /storage/research/dbmr_urology/Prostate_PDO/SPICE_data/ethseq-universal_exonic_model-hg19.gds
+spia_snps_vcf_file:
+  class: File
+  path: /storage/research/dbmr_urology/Prostate_PDO/SPICE_data/snps_spia_default-hg19.vcf
+sample_sex: m
+vep_reference_genome_version: GRCh37
+vep_data_directory:
+  class: Directory
+  path: /storage/research/dbmr_urology/Prostate_PDO/SPICE_data/homo_sapiens_vep_104_GRCh37
+threads: 5
+create_reports: true
+log_to_file: true
 ```
 
 ### Obtaining files required for processing
