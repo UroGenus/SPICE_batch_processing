@@ -127,7 +127,9 @@ cp hg19.dict hg19.fa.dict
 
 ##### WES
 ```
-???
+
+bedtools intersect -wa -wb -a Haloplex_Regions_b37_Covered_noHeader_noAnn.bed -b S06588914_Agilent_Clinical_Exome_TargetGeneSymbols.bed > tmp.bed
+
 ```
 
 #### snps_in_kit_vcf_file
