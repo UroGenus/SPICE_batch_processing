@@ -130,8 +130,8 @@ cp hg19_IonTorrent.dict hg19_IonTorrent.fa.dict
 awk -F'\t' -v OFS="\t" '{ print $2, $3, $4, $1 }' S06588914_Agilent_Clinical_Exome_TargetGeneSymbols.txt > S06588914_Agilent_Clinical_Exome_TargetGeneSymbols.bed
 module load UHTS/Analysis/BEDTools/2.29.2
 bedtools intersect -wa -wb -a Haloplex_Regions_b37_Covered_noHeader_noAnn.bed -b S06588914_Agilent_Clinical_Exome_TargetGeneSymbols.bed > tmp.bed
-awk -F'\t' -v OFS="\t" '{ print $1, $2, $3, $7 }' tmp.bed > S06588914_Agilent_Clinical_Exome_TargetGeneSymbols_with_genenames.bed
-java -jar PATHTO/picard.jar BedToIntervalList I=/storage/research/dbmr_urology/Prostate_PDO/SPICE_data/S06588914_Agilent_Clinical_Exome_TargetGeneSymbols_with_genenames.bed O=/storage/research/dbmr_urology/Prostate_PDO/SPICE_data/S06588914_Agilent_Clinical_Exome_TargetGeneSymbols.interval_list SD=/storage/research/dbmr_urology/Prostate_PDO/SPICE_data/hg19_WES.fa
+awk -F'\t' -v OFS="\t" '{ print $1, $2, $3, $7 }' tmp.bed > Haloplex_Regions_b37_Covered_noHeader_with_genenames.bed
+java -jar PATHTO/picard.jar BedToIntervalList I=/storage/research/dbmr_urology/Prostate_PDO/SPICE_data/Haloplex_Regions_b37_Covered_noHeader_with_genenames.bed O=/storage/research/dbmr_urology/Prostate_PDO/SPICE_data/Haloplex_Regions_b37_Covered_noHeader_with_genenames.interval_list SD=/storage/research/dbmr_urology/Prostate_PDO/SPICE_data/hg19_WES.fa
 ```
 
 #### snps_in_kit_vcf_file
