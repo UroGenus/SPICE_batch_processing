@@ -12,6 +12,8 @@ conda install -c conda-forge cwltool
 ```
 conda activate spice-env
 module load nodejs/14.17.0-GCCcore-10.3.0
+module load Workspace_Home/1.1
+module load Workspace/home GATK
 cwltool --no-container PATH_TO/SPICE-pipeline-CWL/cwl/workflows/pipeline.cwl PATH_TO/parameters.yaml
 
 ```
