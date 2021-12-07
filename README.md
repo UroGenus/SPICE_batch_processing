@@ -6,15 +6,16 @@ This repository contains scripts for batch processing of raw .bam files using th
 ```
 git clone https://github.com/demichelislab/SPICE-pipeline-CWL
 conda install -c conda-forge cwltool
+module load Workspace_Home
+mkdir $SCRATCH
+chmod 700 $SCRATCH
 ```
 
 ### Process one file 
 ```
 conda activate spice-env
 module load nodejs/14.17.0-GCCcore-10.3.0
-module load Workspace_Home/1.1
-module load Workspace/home GATK
-cwltool --no-container PATH_TO/SPICE-pipeline-CWL/cwl/workflows/pipeline.cwl PATH_TO/parameters.yaml
+cwltool --singularity PATH_TO/SPICE-pipeline-CWL/cwl/workflows/pipeline.cwl PATH_TO/parameters.yaml
 
 ```
 
