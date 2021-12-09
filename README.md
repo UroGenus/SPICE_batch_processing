@@ -111,7 +111,7 @@ log_to_file: true
 
 ### Obtaining files required for processing
 
-### kit_target_bed_file, kit_bait_bed_file
+#### kit_target_bed_file, kit_bait_bed_file
 ```
 sort -k 1,1 -k2,2n WG_IAD127899.20170720.designed.bed > WG_IAD127899.20170720.designed.sorted.bed
 ```
