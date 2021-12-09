@@ -112,25 +112,34 @@ log_to_file: true
 ### Obtaining files required for processing
 
 #### kit_target_bed_file, kit_bait_bed_file
+
+##### IonTorrent
+
 ```
 sort -k 1,1 -k2,2n WG_IAD127899.20170720.designed.bed > WG_IAD127899.20170720.designed.sorted.bed
+```
+
+#### reference_genome_fasta_file
+
+##### IonTorrent
+```
+cd DIR_WITH_PipeIT.img
+singularity exec --cleanenv -B /path/to/current/directory/ PipeIT.img cp /PipeIT_resources/usr/local/res/hg19.fasta .
+module load vital-it/7
+module load UHTS/Analysis/samtools/1.10
+samtools faidx hg19_IonTorrent.fa
+cp hg19_IonTorrent.fa.fai hg19_IonTorrent.fai
+cp hg19_IonTorrent.dict hg19_IonTorrent.fa.dict
 ```
 
 #### kit_target_interval_file, kit_bait_interval_file 
 
 ##### IonTorrent
 ```
-cd DIR_WITH_PipeIT.img
-singularity exec --cleanenv -B /path/to/current/directory/ PipeIT.img cp /PipeIT_resources/usr/local/res/hg19.fasta .
 wget https://github.com/broadinstitute/picard/releases/download/2.26.5/picard.jar
 module load Java/11.0.2
 java -jar PATHTO/picard.jar CreateSequenceDictionary R=/storage/research/dbmr_urology/Prostate_PDO/hg19_IonTorrent.fa O=/storage/research/dbmr_urology/Prostate_PDO/hg19_IonTorrent.dict
 java -jar PATHTO/picard.jar BedToIntervalList  I=/storage/research/dbmr_urology/Prostate_PDO/WG_IAD127899.20170720.designed.bed O=/storage/research/dbmr_urology/Prostate_PDO/SPICE_data/WG_IAD127899.20170720.interval_list SD=/storage/research/dbmr_urology/Prostate_PDO/hg19_IonTorrent.fa
-module load vital-it/7
-module load UHTS/Analysis/samtools/1.10
-samtools faidx hg19_IonTorrent.fa
-cp hg19_IonTorrent.fa.fai hg19_IonTorrent.fai
-cp hg19_IonTorrent.dict hg19_IonTorrent.fa.dict
 ```
 
 ##### WES
