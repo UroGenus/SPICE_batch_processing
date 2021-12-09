@@ -32,10 +32,10 @@ reference_genome_fasta_file:
   path: /storage/research/dbmr_urology/Prostate_PDO/hg19.fa
 kit_target_bed_file:
   class: File
-  path: /storage/research/dbmr_urology/Prostate_PDO/WG_IAD127899.20170720.designed.bed
+  path: /storage/research/dbmr_urology/Prostate_PDO/WG_IAD127899.20170720.designed.sorted.bed
 kit_bait_bed_file:
   class: File
-  path: /storage/research/dbmr_urology/Prostate_PDO/WG_IAD127899.20170720.designed.bed
+  path: /storage/research/dbmr_urology/Prostate_PDO/WG_IAD127899.20170720.designed.sorted.bed
 kit_target_interval_file:
   class: File
   path: /storage/research/dbmr_urology/Prostate_PDO/SPICE_data/WG_IAD127899.20170720.interval_list
@@ -110,6 +110,11 @@ log_to_file: true
 ```
 
 ### Obtaining files required for processing
+
+### kit_target_bed_file, kit_bait_bed_file
+```
+sort -k 1,1 -k2,2n WG_IAD127899.20170720.designed.bed > WG_IAD127899.20170720.designed.sorted.bed
+```
 
 #### kit_target_interval_file, kit_bait_interval_file 
 
