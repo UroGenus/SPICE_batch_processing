@@ -167,6 +167,7 @@ gatk IndexFeatureFile -I Homo_sapiens_assembly19.dbsnp.vcf
 ##### IonTorrent
 ```
 ./SPICE.preprocessing.sh
+cat WG_IAD127899.20170720.snp.vcf | gawk '{if($0 ~ /^#/){print $0}else{if($5 !~ /,/){print $0}}}' > WG_IAD127899.20170720.snp.wout.comma.vcf
 ```
 
 ##### WES
