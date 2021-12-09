@@ -32,10 +32,10 @@ reference_genome_fasta_file:
   path: /storage/research/dbmr_urology/Prostate_PDO/hg19.fa
 kit_target_bed_file:
   class: File
-  path: /storage/research/dbmr_urology/Prostate_PDO/WG_IAD127899.20170720.designed.sorted.bed
+  path: /storage/research/dbmr_urology/Prostate_PDO/WG_IAD127899.20170720.designed.sorted.merged.bed
 kit_bait_bed_file:
   class: File
-  path: /storage/research/dbmr_urology/Prostate_PDO/WG_IAD127899.20170720.designed.sorted.bed
+  path: /storage/research/dbmr_urology/Prostate_PDO/WG_IAD127899.20170720.designed.sorted.merged.bed
 kit_target_interval_file:
   class: File
   path: /storage/research/dbmr_urology/Prostate_PDO/SPICE_data/WG_IAD127899.20170720.interval_list
@@ -117,6 +117,8 @@ log_to_file: true
 
 ```
 sort -k 1,1 -k2,2n WG_IAD127899.20170720.designed.bed > WG_IAD127899.20170720.designed.sorted.bed
+module load UHTS/Analysis/BEDTools/2.29.2
+bedtools merge -c 4,5,6 -o distinct,distinct,distinct -i WG_IAD127899.20170720.designed.sorted.bed > WG_IAD127899.20170720.designed.sorted.merged.bed
 ```
 
 #### reference_genome_fasta_file
@@ -139,7 +141,7 @@ cp hg19_IonTorrent.dict hg19_IonTorrent.fa.dict
 wget https://github.com/broadinstitute/picard/releases/download/2.26.5/picard.jar
 module load Java/11.0.2
 java -jar PATHTO/picard.jar CreateSequenceDictionary R=/storage/research/dbmr_urology/Prostate_PDO/hg19_IonTorrent.fa O=/storage/research/dbmr_urology/Prostate_PDO/hg19_IonTorrent.dict
-java -jar PATHTO/picard.jar BedToIntervalList  I=/storage/research/dbmr_urology/Prostate_PDO/WG_IAD127899.20170720.designed.bed O=/storage/research/dbmr_urology/Prostate_PDO/SPICE_data/WG_IAD127899.20170720.interval_list SD=/storage/research/dbmr_urology/Prostate_PDO/hg19_IonTorrent.fa
+java -jar PATHTO/picard.jar BedToIntervalList  I=/storage/research/dbmr_urology/Prostate_PDO/WG_IAD127899.20170720.designed.sorted.merged.bed O=/storage/research/dbmr_urology/Prostate_PDO/SPICE_data/WG_IAD127899.20170720.interval_list SD=/storage/research/dbmr_urology/Prostate_PDO/hg19_IonTorrent.fa
 ```
 
 ##### WES
