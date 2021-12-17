@@ -177,8 +177,19 @@ gatk SelectVariants -R /storage/research/dbmr_urology/Prostate_PDO/SPICE_data/Ho
 
 #### CURRENT ISSUES
 
-SPICE pipeline breaks on the following command, no log is generated
+SPICE pipeline breaks on the following command
 ```
-'pacbam' 'mode=2' 'out=/tmp/ce3mkdyz' 'bam=/tmp/j1bto35r/stgbc3143b9-7116-40e7-a4ee-5cceb8ab7cbc/IonXpress-026.bam' 'mbq=20' 'mrq=20' 'fasta=/tmp/j1bto35r/stg0d8e8d0a-4e8f-4c81-8be1-71198cada795/hg19.fa' 'regionperc=0.5' 'bed=/tmp/j1bto35r/stg5ee45000-8377-4874-9075-d540fa068871/WG_IAD127899.20170720.designed.bed' 'vcf=/tmp/j1bto35r/stg83bd194e-d14d-403c-b1bd-31183bfac3ab/WG_IAD127899.20170720.snp.vcf' 'threads=5' 2> pileup_normal.log 1>&2
+'ethseq' '--enable_plot' '--num_threads' '5' '/var/lib/cwl/stg0c4dda1c-37d5-42a9-9499-22d03456c9ac/ethseq-universal_exonic_model-hg19.gds' '/var/lib/cwl/stg9646c714-3e33-4ff0-8dfb-47ca0577276b/genotype.vcf' 'ethseq'
+[2021-12-10 09:19:14] Running EthSEQ
+[2021-12-10 09:19:14] Working directory: ethseq
+[2021-12-10 09:19:14] Create ethseq folder
+[2021-12-10 09:19:14] Create target model from VCF
+[2021-12-10 09:19:19] Create aggregated model
+[2021-12-10 09:19:21] ERROR: Target and reference models are not compatible.
+```
+Hypothesis: [ethseq](https://github.com/cibiobcg/EthSEQ) default parameter is `bam.chr.encoding = FALSE`. We might need to change that.
+
+To run ethseq on Ubelix:
 ```
 
+```
