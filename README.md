@@ -191,5 +191,21 @@ Hypothesis: [ethseq](https://github.com/cibiobcg/EthSEQ) default parameter is `b
 
 To run ethseq on Ubelix:
 ```
-
+R
+library('EthSEQ')
+## Run the analysis
+ethseq.Analysis(
+  bam.list = file.path(data.dir,"BAMs_List.txt"),
+  out.dir = out.dir,
+  model.gds = system.file("extdata","Reference_SS2_10000SNPs.gds",
+     package="EthSEQ"),
+  verbose=TRUE,
+  aseq.path = out.dir,
+  mbq=20,
+  mrq=20,
+  mdc=10,
+  run.genotype = TRUE,
+  composite.model.call.rate = 1,
+  cores=1,
+  bam.chr.encoding = FALSE) # chromosome names encoded without "chr" prefix in BAM files
 ```
