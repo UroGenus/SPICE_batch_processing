@@ -195,12 +195,16 @@ module load R/4.1.0-foss-2021a
 R
 library(tcltk)
 library('EthSEQ')
-## Run the analysis
-ethseq.Analysis(
+data.dir = file.path(tempdir(),"EthSEQ_Data")
+out.dir = file.path(tempdir(),"EthSEQ_Analysis")
+dir.create(data.dir)
+file.copy('/storage/research/dbmr_urology/Prostate_PDX/IonTorrent/bam/IonXpress-026.bam', data.dir)
+file.copy('/storage/research/dbmr_urology/Prostate_PDX/IonTorrent/bam/IonXpress-026.bam.bai', data.dir)
+write(file.path(data.dir,"IonXpress-026.bam"),file.path(data.dir,"BAMs_List.txt"))
+ethseq.Analysis(                                                                  
   bam.list = file.path(data.dir,"BAMs_List.txt"),
   out.dir = out.dir,
-  model.gds = system.file("extdata","Reference_SS2_10000SNPs.gds",
-     package="EthSEQ"),
+  model.gds = "/storage/research/dbmr_urology/Prostate_PDO/SPICE_data/ethseq-universal_exonic_model-hg19.vcf",
   verbose=TRUE,
   aseq.path = out.dir,
   mbq=20,
