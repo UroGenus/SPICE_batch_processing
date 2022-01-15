@@ -191,7 +191,9 @@ Hypothesis: [ethseq](https://github.com/cibiobcg/EthSEQ) default parameter is `b
 
 To run ethseq on Ubelix:
 ```
+module load R/4.1.0-foss-2021a
 R
+library(tcltk)
 library('EthSEQ')
 ## Run the analysis
 ethseq.Analysis(
