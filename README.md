@@ -204,7 +204,7 @@ write(file.path(data.dir,"IonXpress-026.bam"),file.path(data.dir,"BAMs_List.txt"
 ethseq.Analysis(                                                                  
   bam.list = file.path(data.dir,"BAMs_List.txt"),
   out.dir = out.dir,
-  model.gds = "/storage/research/dbmr_urology/Prostate_PDO/SPICE_data/ethseq-universal_exonic_model-hg19.vcf",
+  model.gds = "/storage/research/dbmr_urology/Prostate_PDO/SPICE_data/ethseq-universal_exonic_model-hg19.gds",
   verbose=TRUE,
   aseq.path = out.dir,
   mbq=20,
